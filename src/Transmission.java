@@ -25,17 +25,18 @@ public class Transmission {
 
 
             String Code_Message_length = message.substring(10,13);
-            System.out.println(Code_Message_length);
+           // System.out.println(Code_Message_length);
             String Isolated_Message = message.substring(14,message.length()-5);
-            System.out.println(Isolated_Message.length());
-            if (Integer.parseInt(Code_Message_length) == Isolated_Message.length()) {
-                System.out.println("yes");
-            } else {
-                    System.out.println("no");
-                }
-            Character[] Message_Char =
-                    Isolated_Message.chars().mapToObj(c -> (char)c).toArray(Character[]::new);
-            System.out.println(Arrays.toString(Message_Char));
+           // System.out.println(Isolated_Message.length());
+            if (Integer.parseInt(Code_Message_length) != Isolated_Message.length() {
+                System.out.println("Length error");
+                System.exit(0);
+            }
+
+
+
+
+
 
              for (int i = 0;Isolated_Message.length() > i;i++) {
 
@@ -55,4 +56,9 @@ public class Transmission {
 
 
 
+/*
+    Character[] Message_Char =
+            Isolated_Message.chars().mapToObj(c -> (char)c).toArray(Character[]::new);
+            System.out.println(Arrays.toString(Message_Char));
 
+ */
